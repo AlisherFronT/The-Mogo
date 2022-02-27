@@ -32,7 +32,8 @@ hr{
 
 .container{
     width: 100%;
-    min-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -49,7 +50,7 @@ hr{
 }
 
 .intro_title{
-    font-size: 110px;
+    font-size: 88px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -64,7 +65,7 @@ hr{
     height: 3px;
     display: block;
     background-color: #fff;
-    margin: 60px auto ;
+    margin: 45px auto ;
 
 }
 
@@ -79,8 +80,8 @@ hr{
 .intro_suptitle{
     color: #fff;
     font-family: 'Kaushan Script', cursive;;
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 40px;
+    margin-top: 40px;
    
 }
 
@@ -96,7 +97,7 @@ hr{
 
 .header_inner{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -165,7 +166,7 @@ hr{
 
 /*Слайдеры*/
 .intro_slider{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     z-index: 1;
@@ -279,15 +280,15 @@ hr{
 /*Card*/
 
 .about{
-    margin-top: 80px;
+    margin: 80px 0px;
     display:flex;
-    justify-content: space-around; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .about_item{
-    width: 380px;
-    background-color: #95e1d3;
-    position: relative;
+    width: 25.33333%;
+    padding: 0 15px;
 }
 
 .about_item:hover .about_img img{
@@ -312,6 +313,8 @@ hr{
 .about_img img{
     transition: opacity .1s linear;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .about_text{
@@ -341,6 +344,7 @@ hr{
 
 .stat{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat_item{
@@ -372,13 +376,18 @@ hr{
 
 .services{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services_item{
-    flex: 1 1 0;
+    width: 23.33333%;
     position: relative;
-    padding-left: 70px;
-    
+    padding: 0 35px 30px 85px;
+    margin-bottom: 30px;  
+}
+
+.services_item--border{
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services_icon{
@@ -1082,9 +1091,6 @@ hr{
 
 /*Blogs*/
 
-.blogs{
-
-}
 
 .blogs_item{
     display: flex;
@@ -1149,3 +1155,192 @@ hr{
 .copyright span{
     color: #f38181;
 }
+
+
+
+@media (max-width: 1230px) {
+
+    /* Intro */
+    .intro__suptitle {
+        font-size: 52px;
+    }
+
+    .intro__title {
+        font-size: 120px;
+    }
+
+}
+
+@media (max-width: 990px) {
+
+    /* Intro */
+    .intro__suptitle {
+        font-size: 32px;
+    }
+
+    .intro__title {
+        font-size: 80px;
+    }
+
+    /* Stat */
+    .stat {
+       justify-content: center;
+    }
+
+    .stat__item {
+        flex: none;
+        width: 33.33333%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        border: 0;
+    }
+
+    .stat__item:last-child {
+        border-right: 0;
+    }
+
+    /* Services */
+    .services__item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .services__item--border {
+        border-bottom: 0;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    /* Nav */
+    .nav {
+        display: none;
+    }
+
+
+    /* Section */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section--devices {
+        padding-bottom: 0;
+    }
+
+
+    /* Card */
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* Slider */
+    .slider__text {
+        display: none;
+    }
+
+    .slider__item.active:before {
+        width: 50%;
+    }
+
+    /* Services */
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon {
+        left: 0;
+    }
+
+
+    /* Wedo */
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    /* Intro */
+    .intro__suptitle {
+        font-size: 22px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+    /* Section */
+    .section__header {
+        margin-bottom: 50px;
+    }
+
+    .section__suptitle {
+        font-size: 20px;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+
+    .section__title:after {
+        margin: 20px auto;
+    }
+
+    /* Stat */
+    .stat__item {
+        width: 100%;
+
+        border-bottom: 1px solid #b5eae0;
+    }
+
+    .stat__item:last-child {
+        border-bottom: 0;
+    }
+
+    .stat__count {
+        font-size: 52px;
+    }
+
+
+    /* Devices */
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
+
+}
+
+ 
+ 
+ 
